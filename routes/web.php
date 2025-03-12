@@ -21,4 +21,4 @@ require __DIR__.'/auth.php';
 
 Route::get('/top', function() {
     return view('top');
-});
+})->name('top');

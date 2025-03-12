@@ -1,3 +1,91 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ヘッダー部分 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* ロゴ */
+.logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ハンバーガーメニュー */
+.hamburger-menu button {
+  display: none;  /* 初めは表示しない */
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger-menu button .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* ナビゲーションメニュー */
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+nav .nav-links ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav .nav-links ul li {
+  display: inline-block;
+}
+
+nav .nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* ハンバーガーメニューが表示される時のスタイル */
+@media (max-width: 768px) {
+  .hamburger-menu button {
+      display: flex;  /* 画面が小さいとハンバーガーメニューを表示 */
+  }
+
+  /* ナビゲーションメニューが非表示の時 */
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+  }
+
+  /* メニューが表示される時 */
+  .nav-links.show {
+      display: block;
+  }
+
+  nav .nav-links ul {
+      flex-direction: column;
+  }
+}
