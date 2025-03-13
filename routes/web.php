@@ -1,6 +1,6 @@
 <?php
 
-use App\Admin\Controllers\ProductController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +24,4 @@ Route::get('/top', function() {
     return view('top');
 })->name('top');
 
-Route::resource('products', ProductController::class);
+Route::get('/products', [ProductController::class, 'index'])->name('product.index');
