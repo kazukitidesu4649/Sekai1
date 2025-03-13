@@ -23,7 +23,7 @@
             </a>
           </li> 
           <li>
-            <a href="#" class="global-navigation__link">
+            <a href="{{ route('product.index') }}" class="global-navigation__link">
               product
             </a>
           </li> 
