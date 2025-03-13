@@ -32,10 +32,7 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', '商品を登録しました！');
     }
 
-
-    /**
-     * 商品詳細表示
-     */
+    // 商品詳細表示
     public function show(Product $product)
     {
         return view('products.show', compact('product'));

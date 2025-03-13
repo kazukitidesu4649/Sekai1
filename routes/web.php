@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,5 @@ require __DIR__.'/auth.php';
 Route::get('/top', function() {
     return view('top');
 })->name('top');
+
+Route::resource('products', ProductController::class);
