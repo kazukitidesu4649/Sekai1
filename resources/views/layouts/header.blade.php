@@ -28,7 +28,7 @@
             </a>
           </li> 
           <li>
-            <a href="#" class="global-navigation__link">
+            <a href="{{ route('contacts.create') }}" class="global-navigation__link">
               contact
             </a>
           </li> 

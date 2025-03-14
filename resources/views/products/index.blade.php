@@ -2,9 +2,7 @@
 
 @section('content')
 <div class="container mx-auto px-4">
-  <h1 class="text-3xl font-extrabold text-center my-8 text-gray-800 border-b-4 border-gray-500 inline-block pb-2">
-        Product
-    </h1>
+<h1 class="text-2xl font-bold text-center mb-6">Product</h1>
 
     @if ($products->isEmpty())
         <p class="text-center text-gray-600">Productがありません。</p>
