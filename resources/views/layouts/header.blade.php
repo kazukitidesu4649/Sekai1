@@ -1,9 +1,9 @@
-<header class="bg-gray-900 text-white py-4">
+<header class="bg-gray-900 text-white py-4 ">
         <!-- ロゴとタイトル -->
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 flex-col">
                 <a href="{{ url('/top') }}" class="flex items-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Sekai1 ロゴ" class="w-5 h-5">
-                    <span class="text-xl font-bold tracking-wide">Sekai1</span>
+                    <img src="{{ asset('images/Sekai1_header_title.png') }}" alt="Sekai1 ロゴ">
+                    <span class="text-xl font-bold tracking-wide"></span>
                 </a>
             </div>
         <div class="header__inner">

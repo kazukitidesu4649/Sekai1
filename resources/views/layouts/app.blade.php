@@ -24,6 +24,8 @@
             <main class="flex flex-col items-center justify-center w-full min-h-screen">
                 @yield('content')
             </main>
+
+            @include('layouts.footer')
         </div>
 
         @vite(['resources/js/app.js'])
