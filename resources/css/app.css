@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🎨 ページ全体の背景画像 */
+.bg-image {
+    background-image: url('/images/Sekai1_haikei.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* スクロールしても背景を固定 */
+}
+
+
 /* ヘッダー部分 */
 header {
   display: flex;
@@ -187,3 +197,121 @@ a {
   .accordion__link {
       color: #172e59;
   }
+/* 🎬 フルスクリーン動画 */
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* 画面いっぱいに表示 */
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画面いっぱいにフィット */
+    object-position: center; /* 動画の中央を表示 */
+}
+
+/* ⬇️ 動画の下のコンテンツ */
+.content {
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 100px 20px; /* 余白 */
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+
+/* 📢 キャッチコピーとタイトル */
+.overlay {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.catchphrase {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.love-song {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+/* 🎼 音符と説明エリア */
+.content {
+    background: linear-gradient(to bottom, #f8f8ff, #ffffff);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 🎶 オリジナルソングの用途 */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* 💰 価格情報 */
+.price-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 40px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price-title {
+    font-size: 1.5rem;
+    color: #c88;
+    font-weight: bold;
+}
+
+.price-detail {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a44;
+}

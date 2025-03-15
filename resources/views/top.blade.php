@@ -1,24 +1,46 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container text-center mt-5">
-    <h1 class="mb-4">世界に一つだけの Love Song</h1>
-    <p>二人だけのオリジナルソングを作りませんか？</p>
-    
-    <div class="row mt-4">
-        <div class="col-md-6 mx-auto">
-            <div class="card shadow-lg p-4">
-                <h3>オリジナルソングの魅力</h3>
-                <ul class="list-unstyled">
-                    <li>✨ 入退場のBGM</li>
-                    <li>🎥 プロフィールムービーのBGM</li>
-                    <li>🎤 余興でパフォーマンス</li>
-                    <li>🎁 サプライズギフト</li>
-                </ul>
-                <p class="mt-3">あなたの特別な想いを形にする楽曲制作サービスです。</p>
-                <a href="#" class="btn btn-primary">詳しく見る</a>
-            </div>
-        </div>
+
+<!-- 🎬 フルスクリーン動画 -->
+<div class="video-container">
+    <video autoplay loop muted playsinline>
+        <source src="{{ asset('videos/movie1.mp4') }}" type="video/mp4">
+        お使いのブラウザは動画タグをサポートしていません。
+    </video>
+    <!-- キャッチコピーとタイトル -->
+    <div class="overlay">
+        <p class="catchphrase">二人だけのオリジナルソング作りませんか？</p>
+        <h1 class="title">世界に一つだけの <span class="love-song">Love Song</span></h1>
     </div>
 </div>
+
+<!-- 🎼 音符と説明エリア -->
+<section class="content">
+    <div class="container text-center">
+        <h2 class="subtitle">オンリーワンのウェディングを演出します</h2>
+
+        <div class="features">
+            <span class="feature-item">✨ 入退場のBGM</span>
+            <span class="feature-item">🎥 プロフィールムービーのBGM</span>
+            <span class="feature-item">🎤 余興でパフォーマンス</span>
+            <span class="feature-item">💿 CDにして引き出物</span>
+            <span class="feature-item">🎁 パートナーや両親へのサプライズギフト</span>
+            <span class="feature-item">etc...</span>
+        </div>
+
+        <p class="description">
+            思い出の場所、大切な記念日等、ご自身のエピソードや<br>
+            希望の音楽スタイルを事前にヒアリングさせていただき、<br>
+            世界に一つのあなただけの楽曲を制作いたします。
+        </p>
+
+        <div class="price-box">
+            <p class="price-title">Price</p>
+            <p class="price-detail">スタンダードプラン 1曲</p>
+            <p class="price-amount">¥100,000〜</p>
+        </div>
+    </div>
+</section>
+
 @endsection

@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Sekai1') }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -14,17 +15,17 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased bg-white">
+    <body class="font-sans antialiased bg-image">
 
         <div class="min-h-screen">
             @include('layouts.header') <!-- ヘッダー部分を表示 -->
 
             <!-- ページのメインコンテンツ -->
-            <main class="py-6 px-4 sm:px-6 lg:px-8">
+            <main class="flex flex-col items-center justify-center w-full min-h-screen">
                 @yield('content')
             </main>
         </div>
-        
+
         @vite(['resources/js/app.js'])
     </body>
 </html>

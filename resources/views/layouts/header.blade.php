@@ -1,42 +1,44 @@
-<header>
-    <div class="logo">
-        <a href="{{ url('/top') }}">Sekai1</a> <!-- ロゴリンク -->
-    </div>
-
-    <div class="header__inner">
-    <button id="js-hamburger" type="button" class="hamburger" aria-controls="navigation" aria-expanded="false" aria-label="メニューを開く">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__text"></span>
-      </button>
-    <div class="header__nav-area js-nav-area" id="navigation">
-      <nav id="js-global-navigation" class="global-navigation">
-        <ul class="global-navigation__list">
-          <li>
-            <a href="{{ route('top') }}" class="global-navigation__link">
-              top
-            </a>
-          </li>
-             
-          <li>
-            <a href="#" class="global-navigation__link">
-              about
-            </a>
-          </li> 
-          <li>
-            <a href="{{ route('product.index') }}" class="global-navigation__link">
-              product
-            </a>
-          </li> 
-          <li>
-            <a href="{{ route('contacts.create') }}" class="global-navigation__link">
-              contact
-            </a>
-          </li> 
-        </ul>
-        <div id="js-focus-trap" tabindex="0"></div>
-      </nav>
-    </div>
-  </div>
+<header class="bg-gray-900 text-white py-4">
+        <!-- ロゴとタイトル -->
+            <div class="flex items-center gap-2">
+                <a href="{{ url('/top') }}" class="flex items-center">
+                    <img src="{{ asset('images/logo.jpg') }}" alt="Sekai1 ロゴ" class="w-5 h-5">
+                    <span class="text-xl font-bold tracking-wide">Sekai1</span>
+                </a>
+            </div>
+        <div class="header__inner">
+            <button id="js-hamburger" type="button" class="hamburger" aria-controls="navigation" aria-expanded="false" aria-label="メニューを開く">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__text"></span>
+            </button>
+            <div class="header__nav-area js-nav-area" id="navigation">
+                <nav id="js-global-navigation" class="global-navigation">
+                    <ul class="global-navigation__list">
+                        <li>
+                            <a href="{{ route('top') }}" class="global-navigation__link">
+                            top
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="global-navigation__link">
+                            about
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="{{ route('product.index') }}" class="global-navigation__link">
+                            product
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="{{ route('contacts.create') }}" class="global-navigation__link">
+                            contact
+                            </a>
+                        </li> 
+                    </ul>
+                    <div id="js-focus-trap" tabindex="0"></div>
+                </nav>
+            </div>
+        </div>
 </header>
 
             <!-- ハンバーガーメニュー増築案
