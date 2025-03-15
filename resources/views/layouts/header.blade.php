@@ -2,7 +2,7 @@
         <!-- ロゴとタイトル -->
             <div class="flex items-center gap-2">
                 <a href="{{ url('/top') }}" class="flex items-center">
-                    <img src="{{ asset('images/logo.jpg') }}" alt="Sekai1 ロゴ" class="w-5 h-5">
+                    <img src="{{ asset('images/logo.png') }}" alt="Sekai1 ロゴ" class="w-5 h-5">
                     <span class="text-xl font-bold tracking-wide">Sekai1</span>
                 </a>
             </div>
