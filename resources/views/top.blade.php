@@ -10,8 +10,7 @@
     </video>
     <!-- キャッチコピーとタイトル -->
     <div class="overlay">
-        <p class="catchphrase">二人だけのオリジナルソング作りませんか？</p>
-        <h1 class="title">世界に一つだけの <span class="love-song">Love Song</span></h1>
+        <img class="catchphrase" src="{{ asset('images/Sekai1_main_title.png') }}"></img>
     </div>
 </div>
 
