@@ -1,61 +1,39 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto p-6">
-    <h1 class="text-2xl font-bold text-center mb-6">Contact</h1>
-
-    @if(session('success'))
-      <div x-data="{ show: true }" 
-          x-show="show"
-          x-transition
-          @click="show = false"
-          x-init="setTimeout(() => show = false, 3000)"
-          class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div class="bg-gray-800 text-white px-6 py-4 rounded shadow-lg cursor-pointer">
-              {{ session('success') }}
-          </div>
-      </div>
-    @endif
-
-
-    <div class="bg-white shadow-md rounded p-6 max-w-lg mx-auto">
-        <form action="{{ route('contacts.store') }}" method="POST">
-            @csrf
-            <table class="table-auto w-full">
-                <tbody>
-                    <tr>
-                        <td class="py-2 px-4 font-semibold">お名前</td>
-                        <td class="py-2 px-4">
-                            <input type="text" name="name" class="w-full p-2 border rounded" value="{{ old('name') }}" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 font-semibold">メールアドレス</td>
-                        <td class="py-2 px-4">
-                            <input type="email" name="email" class="w-full p-2 border rounded" value="{{ old('email') }}" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 font-semibold">電話番号</td>
-                        <td class="py-2 px-4">
-                            <input type="text" name="phone" class="w-full p-2 border rounded" value="{{ old('phone') }}">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 font-semibold">お問い合わせ内容</td>
-                        <td class="py-2 px-4">
-                            <textarea name="message" class="w-full p-2 border rounded" rows="4" required>{{ old('message') }}</textarea>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="text-center mt-6">
-                <button type="submit" class="bg-[#e7e9ee] text-gray-800 px-6 py-2 rounded hover:bg-[#d0d3db] border border-gray-400">
-                    送信する
-                </button>
+<div class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">お問い合わせありがとうございます！<br>下記にメッセージをご記入の上、ご連絡ください。</p>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                    <div class="relative">
+                        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                        <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                    <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                </div>
+                <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                    <a class="text-indigo-500">example@email.com</a>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>
-@endsection
