@@ -16,18 +16,15 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-image">
-
-        <div class="min-h-screen">
+        <div class="min-h-screen flex flex-col">
             @include('layouts.header') <!-- ヘッダー部分を表示 -->
-
             <!-- ページのメインコンテンツ -->
-            <main class="flex flex-col items-center justify-center w-full min-h-screen">
+            <main class="flex-grow">
                 @yield('content')
             </main>
 
             @include('layouts.footer')
         </div>
-
         @vite(['resources/js/app.js'])
     </body>
 </html>

@@ -1,6 +1,6 @@
 <header class="bg-gray-900 text-white py-4 ">
         <!-- ロゴとタイトル -->
-            <div class="flex items-center gap-2 flex-col">
+            <div class="flex items-center gap-2 flex-row">
                 <a href="{{ url('/top') }}" class="flex items-center">
                     <img src="{{ asset('images/Sekai1_header_title.png') }}" alt="Sekai1 ロゴ">
                     <span class="text-xl font-bold tracking-wide"></span>
@@ -40,29 +40,3 @@
             </div>
         </div>
 </header>
-
-            <!-- ハンバーガーメニュー増築案
-            <li>
-                <button type="button" class="global-navigation__link -accordion js-sp-accordion-trigger" aria-expanded = 'false' aria-controls="accordion1">
-                親メニュー
-                </button>
-                <div id="accordion1" class="accordion js-accordion">
-                    <ul class="accordion__list">
-                    <li>
-                        <a href="#" class="accordion__link">
-                        子メニュー
-                        </a>
-                    </li>
-                        <li>
-                        <a href="#" class="accordion__link">
-                        子メニュー
-                        </a>
-                    </li>
-                        <li>
-                        <a href="#" class="accordion__link">
-                        子メニュー
-                        </a>
-                    </li>
-                    </ul>
-                </div>
-            </li> -->

@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* スクロールしても背景を固定 */
+    background-attachment: scroll; /* スクロールしても背景を固定 */
 }
 
 
@@ -20,6 +20,8 @@ header {
   background-color: #333;
   color: white;
   padding: 10px 20px;
+  height: 64px;
+  flex-shrink: 0;
 }
 
 /* ロゴ */
@@ -29,7 +31,7 @@ header {
   text-decoration: none;
 }
 
-/*ハンバーガーメニューの作り方決定版サイトより */
+/*ハンバーガーメニュー */
 a {
   font-family: sans-serif;
   text-decoration: none;
@@ -212,7 +214,7 @@ a {
     object-position: center; /* 動画の中央を表示 */
 }
 
-/* ⬇️ 動画の下のコンテンツ */
+/* 動画の下のコンテンツ */
 .content {
     width: 100%;
     background: white;
@@ -232,7 +234,7 @@ a {
 }
 
 
-/* 📢 キャッチコピーとタイトル */
+/* キャッチコピーとタイトル */
 .overlay {
     position: absolute;
     top: 30%;
@@ -258,7 +260,7 @@ a {
     color: #fff;
 }
 
-/* 🎼 音符と説明エリア */
+/* 音符と説明エリア */
 .content {
     background: linear-gradient(to bottom, #f8f8ff, #ffffff);
     text-align: center;
@@ -271,7 +273,7 @@ a {
     margin-bottom: 30px;
 }
 
-/* 🎶 オリジナルソングの用途 */
+/* オリジナルソングの用途 */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -289,7 +291,7 @@ a {
     font-weight: bold;
 }
 
-/* 💰 価格情報 */
+/* 価格情報 */
 .price-box {
     background: #fff;
     padding: 20px;
